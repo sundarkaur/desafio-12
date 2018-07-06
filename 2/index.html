@@ -1,0 +1,49 @@
+<!-- Crear una galería de imágenes
+
+Todas las imágenes deben estar desaturada (en blanco y negro)
+ver: https://stackoverflow.com/questions/22994810/how-do-i-desaturate-and-saturate-an-image-using-css
+
+Al hacer click sobre la imágen esta debe recuperar su color con una transición
+de un segundo, al volver hacer click debe volver a estar en blanco y negro.
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+ </script>
+    <style type="text/css">
+    	.gris {
+  
+    -webkit-filter: grayscale(100%);
+    -moz-filter:    grayscale(100%);
+    -ms-filter:     grayscale(100%);
+    -o-filter:      grayscale(100%);
+    filter: gray; 
+}
+    </style>
+  </head>
+  <body>
+ 
+
+    <img class="gris" src="../images/1.png">
+    <img class="gris" src="../images/2.jpg">
+    <img class="gris" src="../images/3.jpg">
+    <img class="gris" src="../images/4.jpg">
+    <img class="gris" src="../images/5.jpg">
+    <img class="gris" src="../images/6.jpg">
+    <img class="gris" src="../images/7.jpg">
+    <img class="gris" src="../images/8.jpg">
+
+<script>
+        $(function(){
+            $("img").on("click", function(){
+                $("img").toggleClass("gris");
+            })
+        })
+
+    </script>
+  </body>
+</html>
